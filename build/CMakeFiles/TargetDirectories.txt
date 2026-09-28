@@ -1,0 +1,3 @@
+/home/student/Рабочий стол/folder/build/CMakeFiles/api-analyzer.dir
+/home/student/Рабочий стол/folder/build/CMakeFiles/edit_cache.dir
+/home/student/Рабочий стол/folder/build/CMakeFiles/rebuild_cache.dir

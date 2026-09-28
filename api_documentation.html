@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><title>API Documentation</title>
+<style>body{font-family:sans-serif;max-width:960px;margin:auto;padding:2em}code{background:#f4f4f4;padding:2px 5px;border-radius:3px}.method{border:1px solid #ddd;padding:1em;margin:1em 0;border-radius:6px}.GET{color:#2196f3}.POST{color:#4caf50}.PUT{color:#ff9800}.DELETE{color:#f44336}.issue{color:#d32f2f;font-weight:bold}</style></head><body>
+<h1>API Documentation</h1>
+<h2>Контроллер: ProductController</h2>
+<p><b>Базовый маршрут:</b> <code>/products</code></p>
+<div class="method">
+<h3 class="GET">GET /products/{id}</h3>
+<p><b>Функция:</b> <code>Product getProduct(...)</code></p>
+<p><b>Параметры:</b></p><ul><li><code>id</code> (int)</li></ul>
+<p><b>Возвращает:</b> <code>Product</code></p>
+<p class="issue">Проблемы:</p><ul><li class="issue">Отсутствует валидация входных данных</li><li class="issue">Отсутствует обработка исключений</li></ul>
+</div>
+<div class="method">
+<h3 class="DELETE">DELETE /products/{id}</h3>
+<p><b>Функция:</b> <code>void deleteProduct(...)</code></p>
+<p><b>Параметры:</b></p><ul><li><code>id</code> (int)</li></ul>
+<p><b>Возвращает:</b> <code>void</code></p>
+</div>
+<div class="method">
+<h3 class="GET">GET /products/create</h3>
+<p><b>Функция:</b> <code>Product createProductViaGet(...)</code></p>
+<p><b>Параметры:</b></p><ul><li><code>name</code> (string)</li></ul>
+<p><b>Возвращает:</b> <code>Product</code></p>
+<p class="issue">Проблемы:</p><ul><li class="issue">Отсутствует валидация входных данных</li><li class="issue">Отсутствует обработка исключений</li><li class="issue">GET-метод изменяет данные</li></ul>
+</div>
+<h2>Контроллер: UserController</h2>
+<p><b>Базовый маршрут:</b> <code>/users</code></p>
+<div class="method">
+<h3 class="GET">GET /users</h3>
+<p><b>Функция:</b> <code>List&lt;User&gt; getUsers(...)</code></p>
+<p><b>Параметры:</b></p><ul><li><code>page</code> (int)</li><li><code>limit</code> (int)</li></ul>
+<p><b>Возвращает:</b> <code>List&lt;User&gt;</code></p>
+</div>
+<div class="method">
+<h3 class="POST">POST /users</h3>
+<p><b>Функция:</b> <code>User createUser(...)</code></p>
+<p><b>Тело запроса:</b> <code>UserCreateRequest</code></p>
+<p><b>Возвращает:</b> <code>User</code></p>
+<p class="issue">Проблемы:</p><ul><li class="issue">Отсутствует валидация входных данных</li><li class="issue">Отсутствует обработка исключений</li></ul>
+</div>
+<div class="method">
+<h3 class="GET">GET /users/{id}</h3>
+<p><b>Функция:</b> <code>User getUserById(...)</code></p>
+<p><b>Параметры:</b></p><ul><li><code>id</code> (int)</li></ul>
+<p><b>Возвращает:</b> <code>User</code></p>
+<p class="issue">Проблемы:</p><ul><li class="issue">Отсутствует валидация входных данных</li><li class="issue">Отсутствует обработка исключений</li></ul>
+</div>
+</body></html>

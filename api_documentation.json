@@ -1,0 +1,97 @@
+{
+  "generator": "api-analyzer",
+  "controllers": [
+    {
+      "name": "ProductController",
+      "route": "/products",
+      "file": "/home/student/my-api-project/product.h",
+      "methods": [
+        {
+          "http": "GET",
+          "path": "/products/{id}",
+          "function": "getProduct",
+          "return": "Product",
+          "body": "",
+          "async": false,
+          "middleware": false,
+          "filter": false,
+          "params": [{"name":"id","type":"int"}],
+          "issues": ["Отсутствует валидация входных данных", "Отсутствует обработка исключений"],
+          "recommendations": ["Добавьте проверку входных параметров", "Используйте try/catch или глобальный обработчик"]
+        },
+        {
+          "http": "DELETE",
+          "path": "/products/{id}",
+          "function": "deleteProduct",
+          "return": "void",
+          "body": "",
+          "async": false,
+          "middleware": false,
+          "filter": false,
+          "params": [{"name":"id","type":"int"}],
+          "issues": [],
+          "recommendations": []
+        },
+        {
+          "http": "GET",
+          "path": "/products/create",
+          "function": "createProductViaGet",
+          "return": "Product",
+          "body": "",
+          "async": false,
+          "middleware": false,
+          "filter": false,
+          "params": [{"name":"name","type":"string"}],
+          "issues": ["Отсутствует валидация входных данных", "Отсутствует обработка исключений", "GET-метод изменяет данные"],
+          "recommendations": ["Добавьте проверку входных параметров", "Используйте try/catch или глобальный обработчик", "Используйте POST/PUT/DELETE для мутаций"]
+        }
+      ]
+    },
+    {
+      "name": "UserController",
+      "route": "/users",
+      "file": "/home/student/my-api-project/user.h",
+      "methods": [
+        {
+          "http": "GET",
+          "path": "/users",
+          "function": "getUsers",
+          "return": "List<User>",
+          "body": "",
+          "async": false,
+          "middleware": false,
+          "filter": false,
+          "params": [{"name":"page","type":"int"}, {"name":"limit","type":"int"}],
+          "issues": [],
+          "recommendations": ["Рассмотрите кэширование результата"]
+        },
+        {
+          "http": "POST",
+          "path": "/users",
+          "function": "createUser",
+          "return": "User",
+          "body": "UserCreateRequest",
+          "async": false,
+          "middleware": false,
+          "filter": false,
+          "params": [],
+          "issues": ["Отсутствует валидация входных данных", "Отсутствует обработка исключений"],
+          "recommendations": ["Добавьте проверку входных параметров", "Используйте try/catch или глобальный обработчик"]
+        },
+        {
+          "http": "GET",
+          "path": "/users/{id}",
+          "function": "getUserById",
+          "return": "User",
+          "body": "",
+          "async": false,
+          "middleware": false,
+          "filter": false,
+          "params": [{"name":"id","type":"int"}],
+          "issues": ["Отсутствует валидация входных данных", "Отсутствует обработка исключений"],
+          "recommendations": ["Добавьте проверку входных параметров", "Используйте try/catch или глобальный обработчик"]
+        }
+      ]
+    }
+  ]
+}
